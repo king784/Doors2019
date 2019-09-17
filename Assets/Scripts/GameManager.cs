@@ -7,6 +7,13 @@ public class GameManager : MonoBehaviour
 {
     public void OpenDesktop()
     {
+        StartCoroutine(OpenDesktopCO());
+    }
+
+    IEnumerator OpenDesktopCO()
+    {
+        StartCoroutine(FindObjectOfType<FadeScript>().FadeOut());
+        yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene("Desktop");
     }
 }
