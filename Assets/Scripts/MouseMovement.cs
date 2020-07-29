@@ -7,8 +7,10 @@ public class MouseMovement : MonoBehaviour
     [SerializeField]
     Vector2 offset;
     Vector3 currentMousePos;
-    Vector3 desiredPos;
+    public Vector3 desiredPos;
     Camera mainCam;
+
+    public bool panelAttached = false;
 
     void Start()
     {
