@@ -18,6 +18,8 @@ public class ProgramPanelFollowMouse : MonoBehaviour
         attachedToMouse = true;
         mouse.panelAttached = true;
         offset = mainCam.ScreenToWorldPoint(Input.mousePosition)-transform.parent.position;
+        offset.x += mouse.offset.x;
+        offset.y -= mouse.offset.y;
     }
 
     public void Released()

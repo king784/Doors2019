@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class MouseMovement : MonoBehaviour
 {
-    [SerializeField]
-    Vector2 offset;
+    [HideInInspector] public Vector3 offset;
     Vector3 currentMousePos;
-    public Vector3 desiredPos;
+    [HideInInspector] public Vector3 desiredPos;
     Camera mainCam;
 
     public bool panelAttached = false;
