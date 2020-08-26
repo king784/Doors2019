@@ -13,4 +13,23 @@ public class ProgramPanel : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public void Update()
+    {
+        if(transform.hasChanged)
+        {
+            Debug.Log(GetComponent<RectTransform>().position.x);
+        }
+    }
+
+    [ContextMenu("Debuggi")]
+    public void Debugg()
+    {
+        Vector3[] corners = new Vector3[4];
+        transform.root.GetComponent<RectTransform>().GetWorldCorners(corners);
+        Debug.Log(corners[0]);
+        Debug.Log(corners[1]);
+        Debug.Log(corners[2]);
+        Debug.Log(corners[3]);
+    }
 }
