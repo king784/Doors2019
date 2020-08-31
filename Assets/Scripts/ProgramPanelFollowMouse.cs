@@ -8,10 +8,12 @@ public class ProgramPanelFollowMouse : MonoBehaviour
     bool attachedToMouse = false;
     Vector3 offset;
     Camera mainCam;
+    Transform topPanel;
     void Start()
     {
         mouse = FindObjectOfType<MouseMovement>();
         mainCam = Camera.main;
+        topPanel = transform.GetChild(0);
     }
     public void Clicked()
     {
