@@ -16,10 +16,10 @@ public class ProgramPanel : MonoBehaviour
 
     public void Update()
     {
-        if(transform.hasChanged)
-        {
-            Debug.Log(GetComponent<RectTransform>().position.x);
-        }
+        // if(transform.hasChanged)
+        // {
+        //     Debug.Log(GetComponent<RectTransform>().position.x);
+        // }
     }
 
     [ContextMenu("Debuggi")]
